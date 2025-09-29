@@ -1,97 +1,95 @@
+@charset "UTF-8";
+/* Reset geral: remove espaçamentos padrão dos navegadores e define cálculo mais previsível */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0; /* Remove margens externas */
+  padding: 0; /* Remove preenchimento interno */
+  box-sizing: border-box; /* Faz com que padding e borda sejam incluídos na largura/altura do elemento */
 }
 
+/* Define o fundo preto para o corpo da página */
 body {
   background-color: black;
 }
 
+/* Cabeçalho fixo no topo da tela, com conteúdo distribuído */
 header {
-  background-color: black;
-  padding: 20px 40px;
-  margin-top: 0px;
-  width: 100%;
-  color: #ffffff;
-  display: flex;
-  justify-content: space-between; /* título à esquerda, menu à direita */
-  align-items: center; /* Centraliza verticalmente */
-  position: fixed;
+  background-color: black; /* Fundo preto */
+  padding: 20px 40px; /* Espaçamento interno: 20px vertical, 40px horizontal */
+  margin-top: 0px; /* Sem margem superior */
+  width: 100%; /* Ocupa toda a largura da janela */
+  color: #ffffff; /* Texto branco */
+  display: flex; /* Ativa o Flexbox — modelo de layout flexível */
+  justify-content: space-between; /* Alinha itens com espaço entre eles (título à esquerda, menu à direita) */
+  align-items: center; /* Centraliza os itens verticalmente */
+  position: fixed; /* Mantém o cabeçalho fixo no topo ao rolar a página */
 }
 
+/* Define rolagem suave ao clicar em links com âncoras (ex: #receitas) */
 html {
   scroll-behavior: smooth;
 }
 
+/* Container dos links do menu */
 .menu {
-  display: flex;
-  gap: 30px;
+  display: flex; /* Exibe os links lado a lado */
+  gap: 30px; /* Espaçamento entre cada link do menu */
 }
 
-.menu-receita {
-  font-family: Helvetica;
-  font-weight: 600;
-  color: rgb(206, 206, 206);
-  font-size: 18px;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.menu-catalogo {
-  font-family: Helvetica;
-  font-weight: 600;
-  color: rgb(206, 206, 206);
-  font-size: 18px;
-  transition: color 0.3s ease;
-  text-decoration: none;
-}
-
+/* Estilos compartilhados entre os links do menu */
+.menu-receita,
+.menu-catalogo,
 .menu-inicio {
   font-family: Helvetica;
-  font-weight: 600;
-  color: rgb(206, 206, 206);
+  font-weight: 600; /* Deixa o texto em negrito moderado */
+  color: rgb(206, 206, 206); /* Cinza claro */
   font-size: 18px;
-  text-decoration: none;
-  transition: color 0.3s ease;
+  text-decoration: none; /* Remove sublinhado padrão de links */
+  transition: color 0.3s ease; /* Faz a troca de cor suavemente ao passar o mouse */
 }
 
+/* Estilo de imagem de filme */
 .img-filmes {
   width: 200px;
   height: 300px;
-  object-fit: cover;
-  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover; /* Faz a imagem preencher o espaço sem distorcer, cortando se necessário */
+  border-radius: 5px; /* Borda levemente arredondada */
   margin-bottom: 10px;
 }
 
+/* Estilo de imagem de receita */
 .img-receitas {
   width: 220px;
   height: 250px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 5px;
   margin-bottom: 10px;
   margin-top: 50px;
 }
 
+/* Subtítulo pequeno - Legendas das imagens */
 h3 {
   font-family: Helvetica;
   font-weight: 400;
   color: #ffffff;
   font-size: 12px;
   text-align: center;
-  line-height: 15px;
-  letter-spacing: 0.5px;
+  line-height: 15px; /* Altura entre linhas */
+  letter-spacing: 0.5px; /* Espaço entre letras */
 }
 
+/* Título médio - titulo das seções */
 h2 {
   margin-bottom: 50px;
   align-items: center;
   font-family: Helvetica;
-  font-weight: 700;
+  font-weight: 700; /* Negrito forte */
   font-size: 30px;
   color: black;
 }
 
+/* Subtítulo maior - texto explicativo*/
 h4 {
   font-family: "Nunito";
   font-weight: 400;
@@ -99,9 +97,9 @@ h4 {
   font-size: 21px;
   text-align: center;
   line-height: 30px;
-  
 }
 
+/* Título principal da página - texto do Início (Bem vindo)*/
 h5 {
   font-family: "Century Gothic";
   font-weight: 700;
@@ -111,61 +109,56 @@ h5 {
   margin-bottom: 50px;
 }
 
+/* Título estilizado com gradiente de cor */
 .titulo {
   font-family: Helvetica;
   font-weight: 800;
   font-size: 32px;
   letter-spacing: 3px;
-
-    /* Aplica o gradiente como fundo da área de texto */
-  background: linear-gradient(90deg, rgba(152, 0, 198, 1), rgba(230, 0, 4, 1));
-  /* ↑ Isso cria um degradê indo da esquerda para a direita
-     do roxo (#9800C6) para o vermelho (#E60004) */
-
-  /* Faz com que o fundo (o gradiente) seja "recortado" no formato do texto */
-  -webkit-background-clip: text;
+  /* Gradiente da esquerda para direita: roxo → vermelho */
+  background: linear-gradient(90deg, rgb(152, 0, 198), rgb(230, 0, 4));
+  /* Aplica o gradiente apenas no texto (sem afetar o fundo do bloco) */
+  -webkit-background-clip: text; /* Para navegadores baseados em WebKit (Chrome, Safari) */
   background-clip: text;
-  /* ↑ Isso diz que o fundo (background) só será visível onde houver texto.
-     O prefixo -webkit- é necessário para navegadores baseados em WebKit (Chrome, Safari).
-     A versão sem prefixo é para compatibilidade futura. */
-
-  /* Torna o preenchimento do texto transparente, para o fundo aparecer através das letras */
+  /* Torna o texto transparente para que o gradiente apareça no lugar */
   -webkit-text-fill-color: transparent;
   color: transparent;
-  /* ↑ Isso faz com que o texto em si não tenha cor "própria".
-     Ele se torna "transparente", revelando o fundo que foi recortado pelo background-clip. */
 }
 
+/* Container principal da página */
 main {
-  padding: 40px 20px;
+  padding: 40px 20px; /* Espaçamento interno */
 }
 
+/* Seção inicial com imagem de fundo */
 .inicio {
-  background-image: url('img/image-inicio.png'); /* tudo com background é relativo a imagem de fundo da seção */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: rgba(0, 0, 0, 0.6); /* escurece o fundo */
-  background-blend-mode: darken;
+  background-image: url("img/image-inicio.png"); /* Define a imagem de fundo */
+  background-size: cover; /* Faz a imagem cobrir toda a área */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Impede que a imagem se repita */
+  background-color: rgba(0, 0, 0, 0.6); /* Cor preta com transparência (para escurecer o fundo) */
+  background-blend-mode: darken; /* Mistura a cor escura com a imagem */
   min-height: 550px;
   width: 100%;
-  display: flex;
+  display: flex; /* Flexbox: organiza os elementos internos em coluna */
   flex-direction: column;
-  align-items: center;
-  justify-content: center; /* centraliza o conteúdo verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
   text-align: center;
   margin-top: 100px;
-  margin-bottom: 200px;  
+  margin-bottom: 200px;
 }
 
+/* Seção de filmes */
 .filmes {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 200px;
-  scroll-margin-top: 100px;
+  scroll-margin-top: 100px; /* Dá espaço ao rolar até esta seção */
 }
 
+/* Seção de receitas */
 .receitas {
   display: flex;
   flex-direction: column;
@@ -174,8 +167,9 @@ main {
   margin-bottom: 100px;
 }
 
+/* Botão roxo */
 .btn1 {
-  background-color: rgba(152, 0, 198, 1);
+  background-color: rgb(152, 0, 198); /* Roxo vibrante */
   width: 200px;
   height: 35px;
   text-align: center;
@@ -183,15 +177,16 @@ main {
   font-weight: 600;
   color: #ffffff;
   font-size: 16px;
-  border-radius: 40px;
+  border-radius: 40px; /* Borda totalmente arredondada */
   border: none;
-  cursor: pointer;
-  transition: 0.3s ease;
+  cursor: pointer; /* Mostra cursor de clique */
+  transition: 0.3s ease; /* Suaviza mudanças visuais */
   margin-top: 20px;
-}/*# sourceMappingURL=style.css.map */
+}
 
+/* Botão vermelho */
 .btn2 {
-  background-color:  rgba(230, 0, 4, 1);
+  background-color: rgb(230, 0, 4); /* Vermelho vibrante */
   width: 200px;
   height: 35px;
   font-family: Helvetica;
@@ -205,33 +200,39 @@ main {
   margin-top: 20px;
 }
 
+/* Efeito de hover no botão roxo */
 .btn1:hover {
-  background-color: rgb(232, 139, 255);
+  background-color: rgb(232, 139, 255); /* Tom mais claro no hover */
 }
 
-.btn2:hover:hover {
-  background-color: rgb(251, 114, 114);
+/* Efeito de hover no botão vermelho */
+.btn2:hover {
+  background-color: rgb(251, 114, 114); /* Tom mais claro no hover */
 }
 
+/* Container para exibir os cards alinhados e com espaçamento */
 .forma-cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap; /* Permite que os cards quebrem para outra linha */
+  gap: 50px; /* Espaço entre os cards */
+  justify-content: center; /* Centraliza os cards */
 }
 
+/* Estilo dos cards individuais */
 .card {
-    border-radius: 8px;
-    padding: 16px;
-    width: 250px;
-    text-align: center;
-    transition: transform 0.2s;
+  border-radius: 8px;
+  padding: 16px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.2s; /* Animação suave ao passar o mouse */
 }
 
+/* Efeito hover nos cards */
 .card:hover {
-    transform: scale(1.03);
+  transform: scale(1.03); /* Leve aumento no tamanho */
 }
 
+/* Rodapé com imagem de fundo */
 footer {
   background-image: url(img/image-rodape.png);
   background-size: cover;
@@ -241,12 +242,14 @@ footer {
   width: 100%;
   height: 80px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Espaço entre os elementos */
+  align-items: center;
 }
 
+/* Texto no rodapé */
 p {
   font-family: Helvetica;
   font-size: 14px;
   font-weight: 400;
   color: #f7f7f7;
-}
+}/*# sourceMappingURL=style.css.map */

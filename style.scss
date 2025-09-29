@@ -1,26 +1,255 @@
-// seletores{propriedade:valor;}:
-// * é o seletor global
-*{
-    margin: 0;
-    // zera a margem padrão dos elementos - é o espaçamento externo das tags;
-    padding: 0;
-    // zera o padding padrão dos elementos - é o espaçamento interno das tags;
-    box-sizing: border-box;
-    //  tamanho das caixas - faz o calculo correto dos tamanhos dos elementos, inclui padding e border na largura e altura totais dos elementos;
+/* Reset geral: remove espaçamentos padrão dos navegadores e define cálculo mais previsível */
+* {
+  margin: 0; /* Remove margens externas */
+  padding: 0; /* Remove preenchimento interno */
+  box-sizing: border-box; /* Faz com que padding e borda sejam incluídos na largura/altura do elemento */
 }
 
-// tag
-img{
-    width: 200px;
+/* Define o fundo preto para o corpo da página */
+body {
+  background-color: black;
 }
 
-// class - é um seletor que seleciona elementos HTML com a classe especificada. Pode ser usado em múltiplos elementos.
-.titulo{
-color: rgb(125, 4, 169) ;
+/* Cabeçalho fixo no topo da tela, com conteúdo distribuído */
+header {
+  background-color: black; /* Fundo preto */
+  padding: 20px 40px; /* Espaçamento interno: 20px vertical, 40px horizontal */
+  margin-top: 0px; /* Sem margem superior */
+  width: 100%; /* Ocupa toda a largura da janela */
+  color: #ffffff; /* Texto branco */
+  display: flex; /* Ativa o Flexbox — modelo de layout flexível */
+  justify-content: space-between; /* Alinha itens com espaço entre eles (título à esquerda, menu à direita) */
+  align-items: center; /* Centraliza os itens verticalmente */
+  position: fixed; /* Mantém o cabeçalho fixo no topo ao rolar a página */
 }
 
-//Id é um seletor que seleciona um elemento HTML com o id especificado. Deve ser único na página.
-// #id - seletor
-#btn1{
-    background-color: violet;
+/* Define rolagem suave ao clicar em links com âncoras (ex: #receitas) */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Container dos links do menu */
+.menu {
+  display: flex; /* Exibe os links lado a lado */
+  gap: 30px; /* Espaçamento entre cada link do menu */
+}
+
+/* Estilos compartilhados entre os links do menu */
+.menu-receita,
+.menu-catalogo,
+.menu-inicio {
+  font-family: Helvetica;
+  font-weight: 600; /* Deixa o texto em negrito moderado */
+  color: rgb(206, 206, 206); /* Cinza claro */
+  font-size: 18px;
+  text-decoration: none; /* Remove sublinhado padrão de links */
+  transition: color 0.3s ease; /* Faz a troca de cor suavemente ao passar o mouse */
+}
+
+/* Estilo de imagem de filme */
+.img-filmes {
+  width: 200px;
+  height: 300px;
+  object-fit: cover; /* Faz a imagem preencher o espaço sem distorcer, cortando se necessário */
+  border-radius: 5px; /* Borda levemente arredondada */
+  margin-bottom: 10px;
+}
+
+/* Estilo de imagem de receita */
+.img-receitas {
+  width: 220px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  margin-top: 50px;
+}
+
+/* Subtítulo pequeno - Legendas das imagens */
+h3 {
+  font-family: Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 12px;
+  text-align: center;
+  line-height: 15px; /* Altura entre linhas */
+  letter-spacing: 0.5px; /* Espaço entre letras */
+}
+
+/* Título médio - titulo das seções */
+h2 {
+  margin-bottom: 50px;
+  align-items: center;
+  font-family: Helvetica;
+  font-weight: 700; /* Negrito forte */
+  font-size: 30px;
+  color: black;
+}
+
+/* Subtítulo maior - texto explicativo*/
+h4 {
+  font-family: "Nunito";
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 21px;
+  text-align: center;
+  line-height: 30px;
+}
+
+/* Título principal da página - texto do Início (Bem vindo)*/
+h5 {
+  font-family: "Century Gothic";
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* Título estilizado com gradiente de cor */
+.titulo {
+  font-family: Helvetica;
+  font-weight: 800;
+  font-size: 32px;
+  letter-spacing: 3px;
+
+  /* Gradiente da esquerda para direita: roxo → vermelho */
+  background: linear-gradient(90deg, rgba(152, 0, 198, 1), rgba(230, 0, 4, 1));
+
+  /* Aplica o gradiente apenas no texto (sem afetar o fundo do bloco) */
+  -webkit-background-clip: text; /* Para navegadores baseados em WebKit (Chrome, Safari) */
+  background-clip: text;
+
+  /* Torna o texto transparente para que o gradiente apareça no lugar */
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Container principal da página */
+main {
+  padding: 40px 20px; /* Espaçamento interno */
+}
+
+/* Seção inicial com imagem de fundo */
+.inicio {
+  background-image: url('img/image-inicio.png'); /* Define a imagem de fundo */
+  background-size: cover; /* Faz a imagem cobrir toda a área */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Impede que a imagem se repita */
+  background-color: rgba(0, 0, 0, 0.6); /* Cor preta com transparência (para escurecer o fundo) */
+  background-blend-mode: darken; /* Mistura a cor escura com a imagem */
+  min-height: 550px;
+  width: 100%;
+  display: flex; /* Flexbox: organiza os elementos internos em coluna */
+  flex-direction: column;
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 200px;
+}
+
+/* Seção de filmes */
+.filmes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 200px;
+  scroll-margin-top: 100px; /* Dá espaço ao rolar até esta seção */
+}
+
+/* Seção de receitas */
+.receitas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+/* Botão roxo */
+.btn1 {
+  background-color: rgba(152, 0, 198, 1); /* Roxo vibrante */
+  width: 200px;
+  height: 35px;
+  text-align: center;
+  font-family: Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 16px;
+  border-radius: 40px; /* Borda totalmente arredondada */
+  border: none;
+  cursor: pointer; /* Mostra cursor de clique */
+  transition: 0.3s ease; /* Suaviza mudanças visuais */
+  margin-top: 20px;
+}
+
+/* Botão vermelho */
+.btn2 {
+  background-color: rgba(230, 0, 4, 1); /* Vermelho vibrante */
+  width: 200px;
+  height: 35px;
+  font-family: Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 16px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 20px;
+}
+
+/* Efeito de hover no botão roxo */
+.btn1:hover {
+  background-color: rgb(232, 139, 255); /* Tom mais claro no hover */
+}
+
+/* Efeito de hover no botão vermelho */
+.btn2:hover {
+  background-color: rgb(251, 114, 114); /* Tom mais claro no hover */
+}
+
+/* Container para exibir os cards alinhados e com espaçamento */
+.forma-cards {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os cards quebrem para outra linha */
+  gap: 50px; /* Espaço entre os cards */
+  justify-content: center; /* Centraliza os cards */
+}
+
+/* Estilo dos cards individuais */
+.card {
+  border-radius: 8px;
+  padding: 16px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.2s; /* Animação suave ao passar o mouse */
+}
+
+/* Efeito hover nos cards */
+.card:hover {
+  transform: scale(1.03); /* Leve aumento no tamanho */
+}
+
+/* Rodapé com imagem de fundo */
+footer {
+  background-image: url(img/image-rodape.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20px 40px;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between; /* Espaço entre os elementos */
+  align-items: center;
+}
+
+/* Texto no rodapé */
+p {
+  font-family: Helvetica;
+  font-size: 14px;
+  font-weight: 400;
+  color: #f7f7f7;
 }
