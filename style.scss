@@ -1,0 +1,26 @@
+// seletores{propriedade:valor;}:
+// * é o seletor global
+*{
+    margin: 0;
+    // zera a margem padrão dos elementos - é o espaçamento externo das tags;
+    padding: 0;
+    // zera o padding padrão dos elementos - é o espaçamento interno das tags;
+    box-sizing: border-box;
+    //  tamanho das caixas - faz o calculo correto dos tamanhos dos elementos, inclui padding e border na largura e altura totais dos elementos;
+}
+
+// tag
+img{
+    width: 200px;
+}
+
+// class - é um seletor que seleciona elementos HTML com a classe especificada. Pode ser usado em múltiplos elementos.
+.titulo{
+color: rgb(125, 4, 169) ;
+}
+
+//Id é um seletor que seleciona um elemento HTML com o id especificado. Deve ser único na página.
+// #id - seletor
+#btn1{
+    background-color: violet;
+}
