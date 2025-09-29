@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+header {
+  position: fixed;
+  top: 5%;
+  width: 1470px;
+  height: 1806px;
+  color: #ffffff;
+}
+
+.img-filmes {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.img-receitas {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+
+h3 {
+  font-family: "Nunito", Helvetica;
+  font-weight: 300;
+  color: #ffffff;
+  font-size: 10px;
+  text-align: center;
+  line-height: 16px;
+}
+
+h2 {
+  align-items: center;
+  font-family: "Roboto", Helvetica;
+  font-weight: 900;
+  font-size: 30px;
+  color: #ffffff;
+}
+
+h4 {
+  font-family: "Nunito", Helvetica;
+  font-weight: 300;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: center;
+}
+
+.titulo {
+  font-family: "Anek Bangla", Helvetica;
+  font-weight: 800;
+  color: #ffffff;
+  font-size: 32px;
+  letter-spacing: 3px;
+}
+
+.menu-receita {
+  right: 5%;
+  font-family: "Roboto-Medium", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.menu-catalogo {
+  right: 15%;
+  font-family: "Roboto-Medium", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+main {
+  padding: 40px 20px;
+}
+
+.filmes {
+  top: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.receitas {
+  top: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn1 {
+  background-color: rgb(170, 0, 208);
+  width: 200px;
+  height: 35px;
+  text-align: center;
+  font-family: "Roboto", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 16px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 10px;
+}/*# sourceMappingURL=style.css.map */
+
+.btn2 {
+  background-color: rgb(61, 184, 255);
+  width: 200px;
+  height: 35px;
+  font-family: "Roboto", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 16px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 10px;
+}
+
+.btn1:hover {
+  background-color: rgb(232, 129, 255);
+}
+
+.btn2:hover:hover {
+  background-color: rgb(139, 213, 255);
+}
+
+.forma-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+}
+
+.card {
+    border-radius: 8px;
+    padding: 16px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
