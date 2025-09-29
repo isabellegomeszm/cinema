@@ -9,11 +9,51 @@ body {
 }
 
 header {
-  position: fixed;
-  top: 5%;
-  width: 1470px;
-  height: 1806px;
+  background-color: black;
+  padding: 20px 40px;
+  margin-top: 0px;
+  width: 100%;
   color: #ffffff;
+  display: flex;
+  justify-content: space-between; /* título à esquerda, menu à direita */
+  align-items: center; /* Centraliza verticalmente */
+  position: fixed;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.menu {
+  display: flex;
+  gap: 30px;
+}
+
+.menu-receita {
+  font-family: Helvetica;
+  font-weight: 600;
+  color: rgb(206, 206, 206);
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.menu-catalogo {
+  font-family: Helvetica;
+  font-weight: 600;
+  color: rgb(206, 206, 206);
+  font-size: 18px;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.menu-inicio {
+  font-family: Helvetica;
+  font-weight: 600;
+  color: rgb(206, 206, 206);
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .img-filmes {
@@ -21,89 +61,125 @@ header {
   height: 300px;
   object-fit: cover;
   border-radius: 5px;
+  margin-bottom: 10px;
 }
 
 .img-receitas {
-  width: 250px;
+  width: 220px;
   height: 250px;
   object-fit: cover;
   border-radius: 5px;
+  margin-bottom: 10px;
+  margin-top: 50px;
 }
 
-
 h3 {
-  font-family: "Nunito", Helvetica;
-  font-weight: 300;
+  font-family: Helvetica;
+  font-weight: 400;
   color: #ffffff;
-  font-size: 10px;
+  font-size: 12px;
   text-align: center;
-  line-height: 16px;
+  line-height: 15px;
+  letter-spacing: 0.5px;
 }
 
 h2 {
+  margin-bottom: 50px;
   align-items: center;
-  font-family: "Roboto", Helvetica;
-  font-weight: 900;
+  font-family: Helvetica;
+  font-weight: 700;
   font-size: 30px;
-  color: #ffffff;
+  color: black;
 }
 
 h4 {
-  font-family: "Nunito", Helvetica;
-  font-weight: 300;
+  font-family: "Nunito";
+  font-weight: 400;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 21px;
   text-align: center;
+  line-height: 30px;
+  
+}
+
+h5 {
+  font-family: "Century Gothic";
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 .titulo {
-  font-family: "Anek Bangla", Helvetica;
+  font-family: Helvetica;
   font-weight: 800;
-  color: #ffffff;
   font-size: 32px;
   letter-spacing: 3px;
-}
 
-.menu-receita {
-  right: 5%;
-  font-family: "Roboto-Medium", Helvetica;
-  font-weight: 500;
-  color: #ffffff;
-  font-size: 16px;
-}
+    /* Aplica o gradiente como fundo da área de texto */
+  background: linear-gradient(90deg, rgba(152, 0, 198, 1), rgba(230, 0, 4, 1));
+  /* ↑ Isso cria um degradê indo da esquerda para a direita
+     do roxo (#9800C6) para o vermelho (#E60004) */
 
-.menu-catalogo {
-  right: 15%;
-  font-family: "Roboto-Medium", Helvetica;
-  font-weight: 500;
-  color: #ffffff;
-  font-size: 16px;
+  /* Faz com que o fundo (o gradiente) seja "recortado" no formato do texto */
+  -webkit-background-clip: text;
+  background-clip: text;
+  /* ↑ Isso diz que o fundo (background) só será visível onde houver texto.
+     O prefixo -webkit- é necessário para navegadores baseados em WebKit (Chrome, Safari).
+     A versão sem prefixo é para compatibilidade futura. */
+
+  /* Torna o preenchimento do texto transparente, para o fundo aparecer através das letras */
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  /* ↑ Isso faz com que o texto em si não tenha cor "própria".
+     Ele se torna "transparente", revelando o fundo que foi recortado pelo background-clip. */
 }
 
 main {
   padding: 40px 20px;
 }
 
-.filmes {
-  top: 20%;
+.inicio {
+  background-image: url('img/image-inicio.png'); /* tudo com background é relativo a imagem de fundo da seção */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.6); /* escurece o fundo */
+  background-blend-mode: darken;
+  min-height: 550px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center; /* centraliza o conteúdo verticalmente */
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 200px;  
+}
+
+.filmes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 200px;
+  scroll-margin-top: 100px;
 }
 
 .receitas {
-  top: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
 }
 
 .btn1 {
-  background-color: rgb(170, 0, 208);
+  background-color: rgba(152, 0, 198, 1);
   width: 200px;
   height: 35px;
   text-align: center;
-  font-family: "Roboto", Helvetica;
+  font-family: Helvetica;
   font-weight: 600;
   color: #ffffff;
   font-size: 16px;
@@ -111,14 +187,14 @@ main {
   border: none;
   cursor: pointer;
   transition: 0.3s ease;
-  margin-top: 10px;
+  margin-top: 20px;
 }/*# sourceMappingURL=style.css.map */
 
 .btn2 {
-  background-color: rgb(61, 184, 255);
+  background-color:  rgba(230, 0, 4, 1);
   width: 200px;
   height: 35px;
-  font-family: "Roboto", Helvetica;
+  font-family: Helvetica;
   font-weight: 600;
   color: #ffffff;
   font-size: 16px;
@@ -126,15 +202,15 @@ main {
   border: none;
   cursor: pointer;
   transition: 0.3s ease;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .btn1:hover {
-  background-color: rgb(232, 129, 255);
+  background-color: rgb(232, 139, 255);
 }
 
 .btn2:hover:hover {
-  background-color: rgb(139, 213, 255);
+  background-color: rgb(251, 114, 114);
 }
 
 .forma-cards {
@@ -154,4 +230,23 @@ main {
 
 .card:hover {
     transform: scale(1.03);
+}
+
+footer {
+  background-image: url(img/image-rodape.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20px 40px;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+p {
+  font-family: Helvetica;
+  font-size: 14px;
+  font-weight: 400;
+  color: #f7f7f7;
 }

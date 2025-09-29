@@ -10,13 +10,21 @@
 <body>
     <header>
         <h1 class="titulo">CINEMA VAI NA WEB</h1>
-        <div class="menu-catalogo">Catálogo</div>
-        <div class="menu-receita">Receitas</div> 
+        <nav class="menu">
+            <a class="menu-inicio" href="index.html">Início</a>
+            <a class="menu-catalogo" href="#filmes">Catálogo</a>
+            <a class="menu-receita" href="#receitas">Receitas</a>
+        </nav> 
     </header>
     
     <main> <!--  main = conteúdo do principal da página -->
-        <section class="filmes">
-        <h2>Catálogo</h2>
+        <section class="inicio" id="inicio">
+            <h5>Bem vindo ao Cinema Vai na Web</h5>
+            <h4>Aqui o cinema é meu, mas quem vive a sessão perfeita é você. <br>Com direito a filmes incríveis e receitas deliciosas.</h4>
+        </section>
+        
+        <section class="filmes" id="filmes">
+            <h2>CATÁLOGO</h2>
           <div class="forma-cards">   <!--  card -->
             <div class="card"> <!-- div = dividir -->
              <img class="img-filmes" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQXFKKXo0Hvn6CZBu4seFS0FtiCSx-wrHzn9wi8Ukr9tumwYHVB5qNJ-C-Knr_IiEn8uBAoqkpPp7MWa4qfATnQDepEFaf573LbqZqabM-H0PA6PRaI37khVJZOa7yOuc844fSrgQG02zD/s1600/p15663025_p_v8_aa.jpg" alt="Imagem do filme Para todos os garotos que já amei">
@@ -48,12 +56,19 @@
                 <button class="btn1">Assista Agora</button>
                 </a> 
             </div>
+            <div class="card">
+                <img class="img-filmes" src="https://media.filmelier.com/tit/15999/poster/arquivos-de-um-serial-killer_DZVFnsk.jpeg" alt="Imagem do filme Arquivos de um Serial Killer">
+                <h3>Imagem do filme<br/>Arquivos de um Serial Killer</h3>
+                <a href="https://www.netflix.com/title/81097791" target="_blank" rel="noopener noreferrer">
+                <button class="btn1">Assista Agora</button>
+                </a> 
+            </div>
           </div>
         </section>
         
-        <section class="receitas">
-            <h2>Receitas</h2>
-            <h4>Receitas perfeitas para curtir um bom filme em casa.</h4>
+        <section class="receitas" id="receitas">
+            <h2>Dicas Vai na Web</h2>
+            <h4>A sessão perfeita começa na cozinha! <br>Que tal preparar algo delicioso antes do play?</h4>
              <div class="forma-cards">
                 <div class="card"> <!-- div = dividir -->
                     <img class="img-receitas" src="img/Pixabay-3366767.png" alt="Imagem de pipoca salgada">
@@ -61,26 +76,41 @@
                     <a href="https://www.tudogostoso.com.br/receita/112911-pipoca-de-panela.html" target="_blank" rel="noopener noreferrer">
                     <button class="btn2">Ver Receita</button>
                     </a>  
-            </div>
+                </div>
 
-            <div class="card">
-                <img class="img-receitas" src="img/pixabay-8342805.png" alt="Imagem de pipoca doce">
-                <h3>Imagem de pipoca doce</h3> 
-                <a href="https://www.tudogostoso.com.br/receita/53464-pipoca-doce-caramelada.html" target="_blank" rel="noopener noreferrer">
-                <button class="btn2">Ver Receita</button>
-                </a>
-            </div>
+                <div class="card"> <!-- div = dividir -->
+                    <img class="img-receitas" src="https://static.itdg.com.br/images/640-400/c98fd7befd9325927daaf9a4d1633205/pao-de-queijo-tres-ingredientes.jpg" alt="Imagem de pão de queijo">
+                    <h3>Imagem de pão de queijo</h3> 
+                    <a href="https://www.tudogostoso.com.br/receita/79996-pao-de-queijo-3-ingredientes.html" target="_blank" rel="noopener noreferrer">
+                    <button class="btn2">Ver Receita</button>
+                    </a>  
+                </div>
+            
 
-            <div class="card">
-                <img class="img-receitas" src="img/image-1.png" alt="Imagem de brigadeiro de colher">
-                <h3>Imagem de brigadeiro de colher</h3>
-                <a href="https://www.tudogostoso.com.br/receita/4276-brigadeiro-de-panela.html" target="_blank" rel="noopener noreferrer">
-                <button class="btn2">Ver Receita</button>
-                </a>    
-            </div>
+                <div class="card">
+                    <img class="img-receitas" src="img/pixabay-8342805.png" alt="Imagem de pipoca doce">
+                    <h3>Imagem de pipoca doce</h3> 
+                    <a href="https://www.tudogostoso.com.br/receita/53464-pipoca-doce-caramelada.html" target="_blank" rel="noopener noreferrer">
+                    <button class="btn2">Ver Receita</button>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <img class="img-receitas" src="img/image-1.png" alt="Imagem de brigadeiro de colher">
+                    <h3>Imagem de brigadeiro de colher</h3>
+                    <a href="https://www.tudogostoso.com.br/receita/4276-brigadeiro-de-panela.html" target="_blank" rel="noopener noreferrer">
+                    <button class="btn2">Ver Receita</button>
+                    </a>    
+                </div>
              </div>
         </section>
     </main>
+
+    <footer>
+        <p>Isabelle Gomes © 2025</p>
+        <p>Projeto do curso BIT - L'Oréal & Vai na Web</p>
+    </footer>
+
 </body>
 </html>
 
